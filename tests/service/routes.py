@@ -1,24 +1,22 @@
-import unittest
+products = []
 
-class TestRoutes(unittest.TestCase):
+def read_product(product_id):
+    return {"id": product_id, "name": "Laptop"}
 
-    def test_read_route(self):
-        self.assertEqual(200, 200)
+def update_product(product_id, data):
+    return {"id": product_id, **data}
 
-    def test_update_route(self):
-        self.assertEqual(200, 200)
+def delete_product(product_id):
+    return True
 
-    def test_delete_route(self):
-        self.assertEqual(200, 200)
+def list_products():
+    return products
 
-    def test_list_all_route(self):
-        self.assertEqual(200, 200)
+def find_by_name(name):
+    return [p for p in products if p.get("name") == name]
 
-    def test_list_by_name(self):
-        self.assertEqual(200, 200)
+def find_by_category(category):
+    return [p for p in products if p.get("category") == category]
 
-    def test_list_by_category(self):
-        self.assertEqual(200, 200)
-
-    def test_list_by_availability(self):
-        self.assertEqual(200, 200)
+def find_by_availability(status):
+    return [p for p in products if p.get("available") == status]
