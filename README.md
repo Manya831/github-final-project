@@ -1,3 +1,5 @@
-# github-final-project
+# Customer Accounts Microservice
 
-This project demonstrates CI/CD with GitHub Actions and Tekton Pipelines on OpenShift.
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Manya831/github-final-project)
+
+This project contains customer account microservice APIs.
