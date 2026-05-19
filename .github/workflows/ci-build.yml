@@ -1,1 +1,24 @@
 
+
+name: CI Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: pip install nose flake8 pylint
+
+      - name: Lint code
+        run: flake8 .
+
+      - name: Run unit tests
+        run: nosetests
